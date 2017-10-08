@@ -7,7 +7,7 @@ msg db 'Everyday Le Club [As]', 0
 
 .code
 main proc
-     sub rsp, 28h        ; 8x5 
+     sub rsp, 28h
      mov rcx, 0
      lea rdx, msg
      lea r8,  header
