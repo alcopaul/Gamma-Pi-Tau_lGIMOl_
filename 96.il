@@ -6,7 +6,7 @@
 	.entrypoint
 	.maxstack 6
 
-	ldstr "\r\n=====================\r\nby CHY\r\n---------------------\r\nEveryday Le Club [As]\r\n====================="
+	ldstr "\r\n=====================\r\nby CHY BAr\r\n---------------------\r\nEveryday Le Club [As]\r\n====================="
 	call void [mscorlib]System.Console::WriteLine(string)
         call valuetype [mscorlib]System.ConsoleKeyInfo [mscorlib]System.Console::ReadKey()
         pop
