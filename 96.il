@@ -1,4 +1,5 @@
 .assembly extern mscorlib {}
+.module extern kernel32
 .module extern user32
 .assembly Win96{}
 
@@ -10,6 +11,10 @@
                             string text,
                             string caption,
                             int32 t) cil managed preservesig
+  {
+  }
+  .method public hidebysig static pinvokeimpl("kernel32.dll" winapi) 
+          void  ExitProcess(unsigned int32 uExitCode) cil managed preservesig
   
   {
   }
@@ -29,7 +34,7 @@ call  int32 Win32::MessageBox(int32,
                               string,
                               string,
                               int32)
-pop
+call void Win32::ExitProcess(unsigned int32);
 ret
 }
 }
