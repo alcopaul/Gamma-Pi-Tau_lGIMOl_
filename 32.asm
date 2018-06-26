@@ -1,8 +1,8 @@
 .386
 .model flat, stdcall
 
-ExitProcess PROTO, uExitCode:DWORD
-MessageBoxA PROTO, hWnd:DWORD, lpText:DWORD, lpCaption:DWORD, uType:DWORD
+ExitProcess PROTO uExitCode:DWORD
+MessageBoxA PROTO hWnd:DWORD, lpText:DWORD, lpCaption:DWORD, uType:DWORD
 
 .data
 text 	db 'EVERYDAY Le Club [As]', 0
