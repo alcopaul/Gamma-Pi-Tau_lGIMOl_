@@ -2,12 +2,12 @@ extrn MessageBoxA: PROC
 extrn ExitProcess: PROC
 
 .data
-header db 'by SATAN', 0
-msg db 'Everyday Le Club [As]', 0
+header db 'by SAGSSHAN', 0
+msg db 'EVERYDAY Le Club [As]', 0
 
 .code
 main proc
-     sub rsp, 28h        ; 8x5 
+     sub rsp, 28h 
      mov rcx, 0
      lea rdx, msg
      lea r8,  header
@@ -18,3 +18,5 @@ main proc
      call ExitProcess
 main endp
 end
+
+;ml64.exe 64.asm /link /subsystem:windows /defaultlib:kernel32.lib /defaultlib:user32.lib /entry:main
