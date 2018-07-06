@@ -1,16 +1,15 @@
 .assembly extern mscorlib {}
-.module extern kernel32
 .module extern user32
+.module extern kernel32
 .assembly Win96{}
 
 .class public Win32
-
 {
   .method public hidebysig static pinvokeimpl("user32.dll" winapi) 
           int32  MessageBoxA(int32 hWnd,
-                            string text,
-                            string caption,
-                            int32 t) cil managed preservesig
+                            string lpText,
+                            string lpCaption,
+                            unsigned int32 uType) cil managed preservesig
   {
   }
   .method public hidebysig static pinvokeimpl("kernel32.dll" winapi) 
@@ -25,18 +24,18 @@
 .method static public void main() cil managed
 {
 .entrypoint
-.maxstack 8
+.maxstack 9
 ldc.i4.0
 ldstr "EVERYDAY Le Club [As]"
 ldstr "by CHY BAr"
 ldc.i4.0
-call  int32 Win32::MessageBoxA(int32,
+call int32 Win32::MessageBoxA(int32,
                               string,
                               string,
-                              int32)
+                              unsigned int32)
 call void Win32::ExitProcess(unsigned int32);
 ret
 }
 }
 
-//ilasm.exe /subsystem:2 96.il
+//ilasm.exe 96.il /subsystem:2
