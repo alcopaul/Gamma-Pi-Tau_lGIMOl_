@@ -11,12 +11,12 @@ main proc
      mov rcx, 0
      lea rdx, msg
      lea r8,  header
-     mov r9d, 0
+     mov r9, 0
      call MessageBoxA
-     add rsp, 57h
      mov rcx, rax
      call ExitProcess
+     add rsp, 28h
 main endp
 end
 
-;ml64.exe 64.asm /link /subsystem:windows /defaultlib:kernel32.lib /defaultlib:user32.lib /entry:main
+;ml64.exe 64.asm /link /subsystem:windows /defaultlib:user32.lib /defaultlib:kernel32.lib /entry:main
