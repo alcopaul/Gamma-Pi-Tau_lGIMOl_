@@ -13,9 +13,9 @@ main proc
      lea r8,  header
      mov r9, 0
      call MessageBoxA
+     add rsp, 28h
      mov rcx, rax
      call ExitProcess
-     add rsp, 28h
 main endp
 end
 
