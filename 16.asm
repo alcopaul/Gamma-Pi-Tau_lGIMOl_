@@ -16,3 +16,6 @@ main proc
      int 21h
 main endp
 end start
+
+;ml /omf 16.asm
+;lnk562 16.obj
