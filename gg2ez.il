@@ -1,15 +1,15 @@
 .assembly extern mscorlib {}
-.module extern msvcr110.dll
+.module extern msvcr100.dll
 .assembly CallC{}
 
 .class public CLib
 {
-  .method public hidebysig static pinvokeimpl("msvcr110.dll" cdecl) 
+  .method public hidebysig static pinvokeimpl("msvcr100.dll" cdecl) 
         int32  printf(string a,
                       char b) cil managed preservesig
   {
   }
-  .method public hidebysig static pinvokeimpl("msvcr110.dll" cdecl) 
+  .method public hidebysig static pinvokeimpl("msvcr100.dll" cdecl) 
         int32  getchar() cil managed preservesig
   {
   }
@@ -21,8 +21,8 @@
 {
 .entrypoint
 .maxstack  8
-ldstr      "We lelzing, you hatin%c"
-ldc.i4.s   39
+ldstr      "Hello World%c\r\n"
+ldc.i4.s   33
 call       int32 CLib::printf(string, char)
 pop
 call       int32 CLib::getchar()
@@ -31,4 +31,4 @@ ret
 }
 }
 
-//ilasm.exe ggg.il /subsystem:3
+//ilasm.exe gg2ez.il /subsystem:3
